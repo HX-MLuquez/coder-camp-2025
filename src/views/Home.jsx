@@ -180,12 +180,21 @@ const Home = ({ toggleSidebar }) => {
     color: "#374151",
     margin: 0, // quita margen extra de p
   };
-  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div style={containerStyle} onClick={toggleSidebar}>
       <div style={cardStyle}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.5rem",
+          }}
+        >
           <h1 style={titleStyle}>CODERCAMP.</h1>
           <div style={{ fontWeight: "600", fontSize: "1.3rem" }}>2025</div>
         </div>

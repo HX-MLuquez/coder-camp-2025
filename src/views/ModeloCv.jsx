@@ -157,6 +157,10 @@ const ModeloCv = ({ toggleSidebar }) => {
   };
   const linkHoverStyle = { color: "#1f2937" };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div style={containerStyle} onClick={toggleSidebar}>
       <div style={centerStyle}>
@@ -472,8 +476,16 @@ const ModeloCv = ({ toggleSidebar }) => {
         <div style={gridStyle}>
           <div style={columnStyle}>
             <ul style={listStyle}>
-              <div style={{ display: "flex", justifyContent: "flex-end", marginLeft: "0.5rem", color: "#9ca3af" }}>
-                <NavLink to="/insercion-laboral"
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginLeft: "0.5rem",
+                  color: "#9ca3af",
+                }}
+              >
+                <NavLink
+                  to="/insercion-laboral"
                   style={linkStyle}
                   onMouseEnter={(e) =>
                     (e.target.style.color = linkHoverStyle.color)

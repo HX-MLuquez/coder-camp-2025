@@ -191,6 +191,10 @@ const InsercionLaboral = ({ toggleSidebar }) => {
   };
   const linkHoverStyle = { color: "#1f2937" };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div style={containerStyle} onClick={toggleSidebar}>
       <div style={centerStyle}>
