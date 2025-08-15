@@ -54,7 +54,7 @@ const Footer = () => {
   };
   const flexStyle = {
     display: "flex",
-    gap: "1rem",
+    gap: "1.5rem",
     marginTop: "1rem",
   };
   const socialIconStyle = {

@@ -53,7 +53,7 @@ const Home = ({ toggleSidebar }) => {
     backgroundColor: "#e5e7eb",
     border: "1px solid #9ca3af",
     borderRadius: "0.75rem",
-    width: "4rem",
+    width: "5rem",
     height: "5rem",
   };
 
@@ -214,7 +214,7 @@ const Home = ({ toggleSidebar }) => {
           <div style={flexStyle}>
             <div style={avatarStyle}>
               <img
-                src="/img/perfil.png"
+                src="/img/io.jpeg"
                 alt="Avatar"
                 style={{
                   width: "100%",
