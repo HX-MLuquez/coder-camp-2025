@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   // Estilos
@@ -76,15 +77,14 @@ const Footer = () => {
     marginRight: "0.5rem",
   };
 
+
   return (
     <footer style={footerStyle}>
       <div style={containerStyle}>
         <div style={gridStyle}>
           <div style={columnStyle}>
             <h3 style={headingStyle}>CoderCamp.</h3>
-            <p style={textStyle}>
-              Curso para mejorar la empleabilidad 
-            </p>
+            <p style={textStyle}>Curso para mejorar la empleabilidad</p>
             <div style={flexStyle}>
               <a
                 href="https://www.coderhouse.com/"
@@ -158,50 +158,32 @@ const Footer = () => {
             <h3 style={headingStyle}>Enlaces rápidos</h3>
             <ul style={listStyle}>
               <li style={listItemStyle}>
-                <a
-                  href="#"
-                  style={linkStyle}
-                  onMouseEnter={(e) =>
-                    (e.target.style.color = linkHoverStyle.color)
-                  }
-                  onMouseLeave={(e) => (e.target.style.color = linkStyle.color)}
-                >
+                <NavLink to="/" style={linkStyle}>
                   Inicio
-                </a>
+                </NavLink>
               </li>
               <li style={listItemStyle}>
-                <a
-                  href="/modelo-cv"
-                  style={linkStyle}
-                  onMouseEnter={(e) =>
-                    (e.target.style.color = linkHoverStyle.color)
-                  }
-                  onMouseLeave={(e) => (e.target.style.color = linkStyle.color)}
-                >
+                <NavLink to="/modelo-cv" style={linkStyle}>
                   Modelo CV
-                </a>
+                </NavLink>
               </li>
               <li style={listItemStyle}>
-                <a
-                  href="/insercion-laboral"
-                  style={linkStyle}
-                  onMouseEnter={(e) =>
-                    (e.target.style.color = linkHoverStyle.color)
-                  }
-                  onMouseLeave={(e) => (e.target.style.color = linkStyle.color)}
-                >
+                <NavLink to="/insercion-laboral" style={linkStyle}>
                   Inserción Laboral
-                </a>
+                </NavLink>
               </li>
               <li style={listItemStyle}>
-                <a
-                  href="/destacar-en-entrevistas"
-                  style={linkStyle}
-                  onMouseEnter={(e) =>
-                    (e.target.style.color = linkHoverStyle.color)
-                  }
-                  onMouseLeave={(e) => (e.target.style.color = linkStyle.color)}
-                >
+                <NavLink to="/destacar-en-entrevistas" style={linkStyle}>
+                  Entrevistas
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          <div style={columnStyle}>
+            <h3 style={headingStyle}>Contacto</h3>
+            <ul style={listStyle}>
+              {/* <li style={{ ...listItemStyle, display: 'flex', alignItems: 'center' }}>
                   Entrevistas
                 </a>
               </li>

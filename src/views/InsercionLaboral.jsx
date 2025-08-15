@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const InsercionLaboral = ({ toggleSidebar }) => {
   // Estilos
@@ -10,6 +11,7 @@ const InsercionLaboral = ({ toggleSidebar }) => {
     boxShadow:
       "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
     padding: "1.5rem",
+    paddingTop: "2.5rem",
   };
   const centerStyle = {
     textAlign: "center",
@@ -438,8 +440,8 @@ const InsercionLaboral = ({ toggleSidebar }) => {
                   color: "#9ca3af",
                 }}
               >
-                <a
-                  href="/destacar-en-entrevistas"
+                <NavLink
+                  to="/destacar-en-entrevistas"
                   style={linkStyle}
                   onMouseEnter={(e) =>
                     (e.target.style.color = linkHoverStyle.color)
@@ -448,22 +450,22 @@ const InsercionLaboral = ({ toggleSidebar }) => {
                 >
                   Continuar con Cómo destacar en entrevistas?
                   <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  style={{ marginLeft: "0.5rem", color: "#9ca3af" }}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5-5 5M6 12h12"
-                  />
-                </svg>
-                </a>
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    style={{ marginLeft: "0.5rem", color: "#9ca3af" }}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5-5 5M6 12h12"
+                    />
+                  </svg>
+                </NavLink>
               </div>
             </ul>
           </div>

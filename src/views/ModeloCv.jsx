@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const ModeloCv = ({ toggleSidebar }) => {
   // Estilos
@@ -10,6 +11,7 @@ const ModeloCv = ({ toggleSidebar }) => {
     boxShadow:
       "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
     padding: "1.5rem",
+    paddingTop: "2.5rem",
   };
   const centerStyle = {
     textAlign: "center",
@@ -471,8 +473,7 @@ const ModeloCv = ({ toggleSidebar }) => {
           <div style={columnStyle}>
             <ul style={listStyle}>
               <div style={{ display: "flex", justifyContent: "flex-end", marginLeft: "0.5rem", color: "#9ca3af" }}>
-                <a
-                  href="/insercion-laboral"
+                <NavLink to="/insercion-laboral"
                   style={linkStyle}
                   onMouseEnter={(e) =>
                     (e.target.style.color = linkHoverStyle.color)
@@ -496,7 +497,7 @@ const ModeloCv = ({ toggleSidebar }) => {
                       d="M13 7l5 5-5 5M6 12h12"
                     />
                   </svg>
-                </a>
+                </NavLink>
               </div>
             </ul>
           </div>

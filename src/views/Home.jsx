@@ -15,6 +15,7 @@ const Home = ({ toggleSidebar }) => {
     boxShadow:
       "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
     padding: "1.5rem",
+    paddingTop: "2.5rem",
     marginBottom: "2rem",
   };
 
@@ -184,7 +185,7 @@ const Home = ({ toggleSidebar }) => {
   return (
     <div style={containerStyle} onClick={toggleSidebar}>
       <div style={cardStyle}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}>
           <h1 style={titleStyle}>CODERCAMP.</h1>
           <div style={{ fontWeight: "600", fontSize: "1.3rem" }}>2025</div>
         </div>

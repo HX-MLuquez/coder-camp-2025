@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const DestacarEnEntrevistas = ({ toggleSidebar }) => {
   // Estilos
@@ -10,6 +11,7 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
     boxShadow:
       "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
     padding: "1.5rem",
+    paddingTop: "2.5rem",
   };
 
   const centerStyle = {
@@ -601,8 +603,8 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
         <div style={gridStyle}>
           <div style={columnStyle}>
             <ul style={listStyle}>
-              <a
-                href="/"
+              <NavLink
+                to="/"
                 style={linkStyle}
                 onMouseEnter={(e) =>
                   (e.target.style.color = linkHoverStyle.color)
@@ -610,7 +612,7 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
                 onMouseLeave={(e) => (e.target.style.color = linkStyle.color)}
               >
                 Volver al Inicio
-              </a>
+              </NavLink>
             </ul>
           </div>
         </div>
