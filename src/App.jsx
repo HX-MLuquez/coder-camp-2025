@@ -5,6 +5,7 @@ import Home from "./views/Home";
 import InsercionLaboral from "./views/InsercionLaboral";
 import DestacarEnEntrevistas from "./views/DestacarEnEntrevistas";
 import ModeloCv from "./views/ModeloCv";
+import AppRedirectHandler from "./components/AppRedirectHandler";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -23,14 +24,21 @@ function App() {
         } w-full`}
       >
         <div className="p-6 md:p-8">
+          <AppRedirectHandler />
           <Routes>
             <Route path="/" element={<Home toggleSidebar={toggleSidebar} />} />
-            <Route path="/insercion-laboral" element={<InsercionLaboral toggleSidebar={toggleSidebar} />} />
+            <Route
+              path="/insercion-laboral"
+              element={<InsercionLaboral toggleSidebar={toggleSidebar} />}
+            />
             <Route
               path="/destacar-en-entrevistas"
               element={<DestacarEnEntrevistas toggleSidebar={toggleSidebar} />}
             />
-            <Route path="/modelo-cv" element={<ModeloCv toggleSidebar={toggleSidebar} />} />
+            <Route
+              path="/modelo-cv"
+              element={<ModeloCv toggleSidebar={toggleSidebar} />}
+            />
           </Routes>
         </div>
       </div>
