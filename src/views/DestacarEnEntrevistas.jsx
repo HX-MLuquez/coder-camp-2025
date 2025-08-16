@@ -111,11 +111,11 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
   };
 
   const subsectionTitleStyle = {
-    fontSize: "1.25rem",
+    fontSize: "1.3rem",
     fontWeight: "600",
     color: "#1f2937",
     marginBottom: "0.75rem",
-    backgroundColor: "#f3f4f6",
+    backgroundColor: "#d2ddf2ff",
     padding: "0.5rem",
     borderRadius: "0.25rem",
   };
@@ -132,13 +132,18 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
   };
 
   const listStyle = {
-    listStyleType: "disc",
     paddingLeft: "1.5rem",
     color: "#374151",
+    lineHeight: "1.75rem",
+    listStyleType: "none",
   };
 
   const listItemStyle = {
     marginBottom: "0.25rem",
+    padding: "0.5rem",
+    borderRadius: "0.25rem",
+    backgroundColor: "#f3f4f6",
+    transition: "transform 0.2s",
   };
 
   const qrContainerStyle = {
@@ -199,7 +204,7 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  
+
   return (
     <div style={containerStyle} onClick={toggleSidebar}>
       <div style={centerStyle}>
@@ -503,7 +508,7 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
           </div>
 
           <div style={subsubsectionStyle}>
-            <h4 style={subsubsectionTitleStyle}>Musts</h4>
+            <h4 style={subsubsectionTitleStyle}>Must (imprescindible)</h4>
             <ul style={listStyle}>
               <li style={listItemStyle}>Otros procesos de selección</li>
               <li style={listItemStyle}>Vacaciones y viajes</li>
