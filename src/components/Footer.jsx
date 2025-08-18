@@ -77,7 +77,6 @@ const Footer = () => {
     marginRight: "0.5rem",
   };
 
-
   return (
     <footer style={footerStyle}>
       <div style={containerStyle}>

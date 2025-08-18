@@ -193,6 +193,14 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
     alignItems: "normal",
     gap: "1rem",
   };
+  const linkStyleA = {
+    color: "#9ca3af",
+    textDecoration: "none",
+    transition: "color 0.3s",
+    display: "flex",
+    alignItems: "normal",
+    flexDirection: "column",
+  };
   const borderStyle = {
     borderTop: "1px solid #1f2937",
     paddingTop: "1.5rem",
@@ -200,6 +208,18 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
     color: "#9ca3af",
   };
   const linkHoverStyle = { color: "#1f2937" };
+
+  const grid2ColStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "1rem",
+    marginTop: "1.5rem",
+  };
+
+  const paragraphStyle = {
+    color: "#374151",
+    marginBottom: "1rem",
+  };
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -608,6 +628,64 @@ const DestacarEnEntrevistas = ({ toggleSidebar }) => {
         <div style={qrBoxStyle}></div>
         <p style={qrNoteStyle}>Escanéa el QR para más info</p>
       </div> */}
+
+      <div style={{ marginBottom: "2.5rem" }}>
+        <h3 style={sectionTitleStyle}>Recursos</h3>
+        <div style={grid2ColStyle}>
+          {[
+            {
+              title: "LinkedIn Learning",
+              desc: "Explorar cursos sobre habilidades técnicas y blandas",
+              url: "https://www.linkedin.com/learning/",
+            },
+            {
+              title: "16 Personalities",
+              desc: "Descubrir tu tipo de personalidad y cómo influye en tu carrera",
+              url: "https://www.16personalities.com/es",
+            },
+            {
+              title: "Test de habilidades blandas",
+              desc: "Evaluar y mejorar nuestras habilidades interpersonales",
+              url: "https://arhu.es/archivos/2220/test-soft-skills-espanol/?utm_source=chatgpt.com",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                backgroundColor: "#f9fafb",
+                padding: "1rem",
+                borderRadius: "0.5rem",
+                border: "1px solid #e5e7eb",
+              }}
+            >
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={linkStyleA}
+                onMouseEnter={(e) =>
+                  (e.target.style.color = linkHoverStyle.color)
+                }
+                onMouseLeave={(e) => (e.target.style.color = linkStyle.color)}
+              >
+                <h4
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "1.125rem",
+                    color: "#1d4ed8",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  {item.title}
+                </h4>
+                <p style={paragraphStyle}>{item.desc}</p>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
       <div style={containerStyle}>
         <div style={gridStyle}>
           <div style={columnStyle}>
