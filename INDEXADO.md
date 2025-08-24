@@ -98,3 +98,62 @@ function App() {
   );
 }
 ```
+
+
+---
+
+## Despliegue en NETLIFY
+
+Para capturar todas las redirecciones, utilice /*  /index.html   200el _redirectsarchivo.
+
+Según la documentación de netlify, el _redirectsarchivo debe estar en el directorio de compilación raíz.
+
+```json
+{
+  "name": "coder-camp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+```
+
+
+Para aplicar la lógica de redirecciones de CRA a un proyecto de Vite, puedes seguir un enfoque similar, modificando el script de `build` en tu `package.json` para copiar el archivo `_redirects` a la carpeta de compilación después de que Vite haya terminado de construir la aplicación.
+
+-----
+
+### **Cómo agregar \_redirects a un proyecto de Vite**
+
+Vite, por defecto, compila tu aplicación y la coloca en la carpeta **`dist`** (a diferencia de `build` en CRA). Por lo tanto, el script de `build` necesita ser modificado para copiar el archivo de redirecciones a esta carpeta.
+
+1.  **Crea el archivo `_redirects`**:
+    En la **carpeta raíz** de tu proyecto (la misma donde se encuentra `package.json`), crea un nuevo archivo llamado **`_redirects`**. Dentro de este archivo, agrega tus reglas de redirección. Por ejemplo:
+
+    ```
+    /* /index.html   200
+    /mi-ruta   /otra-ruta   301
+    ```
+
+    La primera línea es crucial para aplicaciones de una sola página (SPA), ya que garantiza que las rutas internas de la aplicación funcionen correctamente al recargar la página o al acceder directamente a ellas.
+
+2.  **Modifica el script `build` en `package.json`**:
+    Abre tu archivo **`package.json`** y encuentra la sección de `scripts`. Modifica el script de `build` para que, después de que Vite termine de compilar (`vite build`), se copie el archivo `_redirects` a la carpeta `dist`.
+
+    ```json
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build && cp _redirects dist/_redirects",
+      "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+      "preview": "vite preview"
+    }
+    ```
+
+      - El comando **`&&`** asegura que el segundo comando (`cp _redirects dist/_redirects`) solo se ejecute si el primero (`vite build`) se completa con éxito.
+      - El comando **`cp`** (de **c**o**p**y) es el equivalente en sistemas basados en Unix (macOS, Linux) a `copy` en Windows. Si estás en Windows, es posible que necesites usar el comando `copy` o una alternativa multiplataforma como `xcopy`. Una opción más robusta y que funciona en ambos sistemas es usar la librería **`cpr`** o **`copyfiles`** y agregarla como un script de post-compilación.
+
+Con esta modificación, cada vez que ejecutes `npm run build` o `yarn build`, Vite compilará tu aplicación y luego el archivo `_redirects` se copiará automáticamente a la carpeta `dist`, listo para ser desplegado.
