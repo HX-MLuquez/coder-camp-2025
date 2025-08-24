@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const Home = ({ toggleSidebar }) => {
   // Estilos
@@ -185,231 +186,244 @@ const Home = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <div style={containerStyle} onClick={toggleSidebar}>
-      <div style={cardStyle}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "0.5rem",
-          }}
-        >
-          <h1 style={titleStyle}>CODERCAMP.</h1>
-          <div style={{ fontWeight: "600", fontSize: "1.3rem" }}>2025</div>
-        </div>
-        <div style={headerStyle}>
-          <div style={subtitleStyle}>
-            Programa de formación y desarrollo profesional{" "}
-            {/* <strong style={{ fontWeight: "600" }}>CoderHouse</strong> */}
-            <div style={logoStyle}>
-              <img
-                src="/img/Logo_blackbg.png"
-                alt="Logo"
-                style={{ width: "100%", height: "auto" }}
-              />
-            </div>
-          </div>
-
-          <div style={flexStyle}>
-            <div style={avatarStyle}>
-              <img
-                src="/img/io.jpeg"
-                alt="Avatar"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "0.75rem",
-                }}
-              />
-            </div>
-            <div style={infoStyle}>
-              <p style={dateStyle}>Participante:</p>
-              <h2 style={nameStyle}>Mauricio Gastón Lúquez</h2>
-              <p style={roleStyle}>Desarrollador FullStack</p>
-            </div>
-          </div>
-        </div>
-        <div style={{ marginBottom: "2.5rem" }}>
-          <h3 style={sectionTitleStyle}>Objetivos del curso</h3>
-          <ul style={listStyle}>
-            <li style={listItemStyle}>
-              <span style={bulletStyle}>➔</span>
-              <span>
-                <strong>Conocer</strong> nuestro diferencial profesional y las
-                necesidades del mercado laboral.
-              </span>
-            </li>
-            <li style={listItemStyle}>
-              <span style={bulletStyle}>➔</span>
-              <span>
-                <strong>Comunicar</strong> nuestro capital de conocimiento,
-                experiencia y aptitudes de manera efectiva.
-              </span>
-            </li>
-            <li style={listItemStyle}>
-              <span style={bulletStyle}>➔</span>
-              <span>
-                <strong>Conectar</strong> con otros profesionales creando red en
-                función de nuestros objetivos.
-              </span>
-            </li>
-            <li style={listItemStyle}>
-              <span style={bulletStyle}>➔</span>
-              <span>
-                <strong>Pasar a la acción</strong> para potenciar nuestra
-                empleabilidad.
-              </span>
-            </li>
-          </ul>
-        </div>
-
-        <div style={speakerStyle}>
+    <>
+      <Helmet>
+        <title>CoderCamp</title>
+      </Helmet>
+      <div style={containerStyle} onClick={toggleSidebar}>
+        <div style={cardStyle}>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
             }}
           >
-            <div
-              style={{ display: "flex", gap: "0.5rem", alignItems: "baseline" }}
-            >
-              <h2 style={speakerTitleStyle}>SPEAKER:</h2>
-              <p style={speakerTextStyle}>
-                Brigitte Bergery - Speaker y creadora de contenidos en Emplea
-                Habilidad
-              </p>
-            </div>
-            <div
-              style={{ display: "flex", gap: "0.5rem", alignItems: "baseline" }}
-            >
-              <h2 style={speakerTitleStyle}>MODERADOR:</h2>
-              <p style={speakerTextStyle}>
-                Nahuel Lema - Co-Founder & BDR @ CoderHouse
-              </p>
-            </div>
+            <h1 style={titleStyle}>CODERCAMP.</h1>
+            <div style={{ fontWeight: "600", fontSize: "1.3rem" }}>2025</div>
           </div>
-        </div>
-
-        <div style={gridStyle}>
-          <div style={statStyle("blue")}>
-            <p style={statNumberStyle}>74%</p>
-            <p style={statTextStyle}>
-              de las empresas a nivel global enfrentan dificultades para
-              encontrar talento cualificado
-            </p>
-          </div>
-          <div style={statStyle("yellow")}>
-            <p style={statNumberStyle}>30%</p>
-            <p style={statTextStyle}>
-              de las búsquedas activas son publicadas ya que hay un gran
-              porcentaje de puestos que no son publicitados
-            </p>
-          </div>
-          <div style={statStyle("red")}>
-            <p style={statNumberStyle}>7/10</p>
-            <p style={statTextStyle}>
-              no recibió información sobre empleabilidad
-            </p>
-          </div>
-        </div>
-
-        <div style={{ marginBottom: "2.5rem" }}>
-          <h3 style={sectionTitleStyle}>¿Qué es la empleabilidad?</h3>
-          <p style={paragraphStyle}>
-            La empleabilidad es la capacidad de una persona para conseguir y
-            mantener un empleo. Esto implica no solo tener las habilidades
-            técnicas necesarias, sino también saber cómo presentarse,
-            comunicarse y relacionarse con los demás.
-          </p>
-          <p style={paragraphStyle}>
-            Es estar en autosintonía con el mercado laboral, conocer sus
-            necesidades y poder adaptarse a ellas. La empleabilidad no es algo
-            que se consigue de una vez por todas, sino que es un proceso
-            continuo que requiere esfuerzo y dedicación.
-          </p>
-
-          <div style={grid2ColStyle}>
-            {[
-              "Autoconocimiento",
-              "Formación continua",
-              "Adaptabilidad",
-              "Comunicación",
-              "Networking",
-              "La marca personal",
-              "El uso de plataformas digitales",
-            ].map((item, index) => (
-              <div key={index} style={listItemStyle}>
-                <span style={{ ...bulletStyle, fontSize: "1.5rem" }}>•</span>
-                <span style={paragraphStyle}>{item}</span>
+          <div style={headerStyle}>
+            <div style={subtitleStyle}>
+              Programa de formación y desarrollo profesional{" "}
+              {/* <strong style={{ fontWeight: "600" }}>CoderHouse</strong> */}
+              <div style={logoStyle}>
+                <img
+                  src="/img/Logo_blackbg.png"
+                  alt="Logo"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        <div style={{ marginBottom: "2.5rem" }}>
-          <h3 style={sectionTitleStyle}>
-            ¿Cómo mejorar nuestra empleabilidad?
-          </h3>
-          <div style={grid2ColStyle}>
-            {[
-              {
-                title: "Conocer",
-                desc: "Identificar nuestras habilidades, intereses y valores únicos",
-              },
-              {
-                title: "Comunicar",
-                desc: "Presentar nuestras habilidades y experiencia de manera efectiva",
-              },
-              {
-                title: "Conectar",
-                desc: "Construir y mantener una red de contactos profesionales",
-              },
-              {
-                title: "Pasar a la acción",
-                desc: "Implementar estrategias para mejorar nuestra empleabilidad",
-              },
-            ].map((item, index) => (
+            <div style={flexStyle}>
+              <div style={avatarStyle}>
+                <img
+                  src="/img/io.jpeg"
+                  alt="Avatar"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "0.75rem",
+                  }}
+                />
+              </div>
+              <div style={infoStyle}>
+                <p style={dateStyle}>Participante:</p>
+                <h2 style={nameStyle}>Mauricio Gastón Lúquez</h2>
+                <p style={roleStyle}>Desarrollador FullStack</p>
+              </div>
+            </div>
+          </div>
+          <div style={{ marginBottom: "2.5rem" }}>
+            <h3 style={sectionTitleStyle}>Objetivos del curso</h3>
+            <ul style={listStyle}>
+              <li style={listItemStyle}>
+                <span style={bulletStyle}>➔</span>
+                <span>
+                  <strong>Conocer</strong> nuestro diferencial profesional y las
+                  necesidades del mercado laboral.
+                </span>
+              </li>
+              <li style={listItemStyle}>
+                <span style={bulletStyle}>➔</span>
+                <span>
+                  <strong>Comunicar</strong> nuestro capital de conocimiento,
+                  experiencia y aptitudes de manera efectiva.
+                </span>
+              </li>
+              <li style={listItemStyle}>
+                <span style={bulletStyle}>➔</span>
+                <span>
+                  <strong>Conectar</strong> con otros profesionales creando red
+                  en función de nuestros objetivos.
+                </span>
+              </li>
+              <li style={listItemStyle}>
+                <span style={bulletStyle}>➔</span>
+                <span>
+                  <strong>Pasar a la acción</strong> para potenciar nuestra
+                  empleabilidad.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div style={speakerStyle}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <div
-                key={index}
                 style={{
-                  backgroundColor: "#f9fafb",
-                  padding: "1rem",
-                  borderRadius: "0.5rem",
-                  border: "1px solid #e5e7eb",
+                  display: "flex",
+                  gap: "0.5rem",
+                  alignItems: "baseline",
                 }}
               >
-                <h4
+                <h2 style={speakerTitleStyle}>SPEAKER:</h2>
+                <p style={speakerTextStyle}>
+                  Brigitte Bergery - Speaker y creadora de contenidos en Emplea
+                  Habilidad
+                </p>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "0.5rem",
+                  alignItems: "baseline",
+                }}
+              >
+                <h2 style={speakerTitleStyle}>MODERADOR:</h2>
+                <p style={speakerTextStyle}>
+                  Nahuel Lema - Co-Founder & BDR @ CoderHouse
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style={gridStyle}>
+            <div style={statStyle("blue")}>
+              <p style={statNumberStyle}>74%</p>
+              <p style={statTextStyle}>
+                de las empresas a nivel global enfrentan dificultades para
+                encontrar talento cualificado
+              </p>
+            </div>
+            <div style={statStyle("yellow")}>
+              <p style={statNumberStyle}>30%</p>
+              <p style={statTextStyle}>
+                de las búsquedas activas son publicadas ya que hay un gran
+                porcentaje de puestos que no son publicitados
+              </p>
+            </div>
+            <div style={statStyle("red")}>
+              <p style={statNumberStyle}>7/10</p>
+              <p style={statTextStyle}>
+                no recibió información sobre empleabilidad
+              </p>
+            </div>
+          </div>
+
+          <div style={{ marginBottom: "2.5rem" }}>
+            <h3 style={sectionTitleStyle}>¿Qué es la empleabilidad?</h3>
+            <p style={paragraphStyle}>
+              La empleabilidad es la capacidad de una persona para conseguir y
+              mantener un empleo. Esto implica no solo tener las habilidades
+              técnicas necesarias, sino también saber cómo presentarse,
+              comunicarse y relacionarse con los demás.
+            </p>
+            <p style={paragraphStyle}>
+              Es estar en autosintonía con el mercado laboral, conocer sus
+              necesidades y poder adaptarse a ellas. La empleabilidad no es algo
+              que se consigue de una vez por todas, sino que es un proceso
+              continuo que requiere esfuerzo y dedicación.
+            </p>
+
+            <div style={grid2ColStyle}>
+              {[
+                "Autoconocimiento",
+                "Formación continua",
+                "Adaptabilidad",
+                "Comunicación",
+                "Networking",
+                "La marca personal",
+                "El uso de plataformas digitales",
+              ].map((item, index) => (
+                <div key={index} style={listItemStyle}>
+                  <span style={{ ...bulletStyle, fontSize: "1.5rem" }}>•</span>
+                  <span style={paragraphStyle}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ marginBottom: "2.5rem" }}>
+            <h3 style={sectionTitleStyle}>
+              ¿Cómo mejorar nuestra empleabilidad?
+            </h3>
+            <div style={grid2ColStyle}>
+              {[
+                {
+                  title: "Conocer",
+                  desc: "Identificar nuestras habilidades, intereses y valores únicos",
+                },
+                {
+                  title: "Comunicar",
+                  desc: "Presentar nuestras habilidades y experiencia de manera efectiva",
+                },
+                {
+                  title: "Conectar",
+                  desc: "Construir y mantener una red de contactos profesionales",
+                },
+                {
+                  title: "Pasar a la acción",
+                  desc: "Implementar estrategias para mejorar nuestra empleabilidad",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
                   style={{
-                    fontWeight: "bold",
-                    fontSize: "1.125rem",
-                    color: "#1d4ed8",
-                    marginBottom: "0.5rem",
+                    backgroundColor: "#f9fafb",
+                    padding: "1rem",
+                    borderRadius: "0.5rem",
+                    border: "1px solid #e5e7eb",
                   }}
                 >
-                  {item.title}
-                </h4>
-                <p style={paragraphStyle}>{item.desc}</p>
-              </div>
-            ))}
+                  <h4
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "1.125rem",
+                      color: "#1d4ed8",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    {item.title}
+                  </h4>
+                  <p style={paragraphStyle}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
+
+          <div style={highlightStyle}>
+            <p style={highlightTextStyle}>La suerte es amiga de la acción</p>
+            <p style={paragraphStyle}>
+              "Recuerda que la suerte favorece a los que están preparados y
+              toman acción. No esperes a que las oportunidades lleguen a ti, sal
+              a buscarlas"
+            </p>
+          </div>
+
+          {/* <ContactForm /> */}
         </div>
 
-        <div style={highlightStyle}>
-          <p style={highlightTextStyle}>La suerte es amiga de la acción</p>
-          <p style={paragraphStyle}>
-            "Recuerda que la suerte favorece a los que están preparados y toman
-            acción. No esperes a que las oportunidades lleguen a ti, sal a
-            buscarlas"
-          </p>
-        </div>
-
-        {/* <ContactForm /> */}
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
