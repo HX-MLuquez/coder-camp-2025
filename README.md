@@ -21,7 +21,7 @@ CoderCamp is an innovative platform designed to help individuals learn and enhan
   *(Herramienta más completa, gratis hasta 500 páginas)*
 
 **Pasos:**
-1. Ingresa tu URL: `https://coder-camp-2025.netify.app`
+1. Ingresa tu URL: `https://codercamp-2025.netify.app`
 2. Haz clic en "Start"
 3. Descarga el archivo `sitemap.xml`
 4. Súbelo a la raíz de tu proyecto en Netlify
@@ -37,7 +37,7 @@ CoderCamp is an innovative platform designed to help individuals learn and enhan
 User-agent: *
 Allow: /
 Disallow: /private/
-Sitemap: https://coder-camp-2025.netify.app/sitemap.xml
+Sitemap: https://codercamp-2025.netify.app/sitemap.xml
 ```
 
 ---
@@ -50,7 +50,7 @@ npm install sitemap-generator-cli --save-dev
 
 **Generar sitemap:**
 ```bash
-npx sitemap-generator https://coder-camp-2025.netify.app -o public/sitemap.xml
+npx sitemap-generator https://codercamp-2025.netify.app -o public/sitemap.xml
 ```
 
 **Crear robots.txt manualmente:**
@@ -58,7 +58,7 @@ npx sitemap-generator https://coder-camp-2025.netify.app -o public/sitemap.xml
 ```txt
 User-agent: *
 Allow: /
-Sitemap: https://coder-camp-2025.netify.app/sitemap.xml
+Sitemap: https://codercamp-2025.netify.app/sitemap.xml
 ```
 
 ---
@@ -69,8 +69,8 @@ Sitemap: https://coder-camp-2025.netify.app/sitemap.xml
    - `/public/robots.txt`
 
 2. Verifica que sean accesibles via:
-   - `https://coder-camp-2025.netify.app/sitemap.xml`
-   - `https://coder-camp-2025.netify.app/robots.txt`
+   - `https://codercamp-2025.netify.app/sitemap.xml`
+   - `https://codercamp-2025.netify.app/robots.txt`
 
 ---
 
