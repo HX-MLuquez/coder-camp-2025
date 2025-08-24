@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Sitemap: https://coder-camp-2025.netify.app/sitemap.xml
