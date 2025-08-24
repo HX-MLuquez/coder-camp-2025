@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /private/
-Sitemap: https://codercamp-2025.netify.app/sitemap.xml
+Sitemap: https://codercamp-2025.netlify.app/sitemap.xml
