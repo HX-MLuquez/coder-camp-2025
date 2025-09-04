@@ -217,17 +217,7 @@ const Home = ({ toggleSidebar }) => {
             </div>
 
             <div style={flexStyle}>
-              <div style={avatarStyle}>
-                <img
-                  src="/img/io.jpeg"
-                  alt="Avatar"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "0.75rem",
-                  }}
-                />
-              </div>
+              
               <div style={infoStyle}>
                 <p style={dateStyle}>Participante:</p>
                 <h2 style={nameStyle}>Mauricio Gastón Lúquez</h2>
